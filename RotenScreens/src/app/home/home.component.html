@@ -1,1 +1,29 @@
-<p>home works!</p>
+<app-header></app-header>
+<div fxLayout="row" fxLayoutAlign="space-around center" class="home-container" *ngIf="!isMobile">
+    <div class="all-movies" fxFlex="75">
+        <div class="trending-movies">
+            <div class="top">
+                <h4>Trending Movies</h4>
+                <div class="view-all">
+                    View All
+                </div>
+            </div>
+            <div class="movie-thumbnail">
+                <div class="movie" *ngFor="let movie of trendingMovies">
+                    <div class="cover">
+                        <img [src]="movie.cover" alt="">
+                    </div>
+                    <div class="detail">
+                        <div class="name">
+                            {{movie.name}}
+                        </div>
+                        <div class="rating">
+                            {{movie.rating}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popular-movies" fxFlex="35"> Popular Movies</div>
+</div>
