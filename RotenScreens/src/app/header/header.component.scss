@@ -1,0 +1,26 @@
+.header-container {
+    width: 100%;
+    height: 6vh;
+    background-color: darkgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        font-size: 24px;
+        font-family: "Creepster";
+        font-weight: bold;
+        color: #c70000;
+        margin-left: 10px;
+        text-shadow: 2px 2px 2px black;
+        cursor: pointer;
+    }
+    .logOut{
+        font-size: 16px;
+        font-family: "Roboto" sans-serif;
+        font-weight: bold;
+        margin-right: 10px;
+        color: #ce5006;
+        cursor: pointer;
+    }
+}

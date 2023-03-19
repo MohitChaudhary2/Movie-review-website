@@ -37,7 +37,6 @@ export class LoginComponent {
     }
     else{
       this.errMsg="";
-      console.log('Logged In: ',this.userName);
       let res = this.auth.LogIn(this.userName,this.password);
       if(res === 200){
         this.router.navigate(['home']);
