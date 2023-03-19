@@ -1,19 +1,20 @@
-<div fxLayout="column" fxLayoutAlign="center end"  class="container">
-    <div class="header">
+<div   class="container" [ngClass]="{'container-mobile':isMobile}">
+    <div class="header" [ngClass]="{'header-mobile':isMobile}">
       <h1>{{companyName}}</h1>
       <p>{{companyDesc}}</p>
     </div>
-    <div class="login-form">
+    <div class="login-form" [ngClass]="{'login-form-mobile':isMobile}">
         <div class="form-group">
             <label for="uname">Username</label>
-            <input type="text" name="uname" class="form-control"/>
+            <input type="text" name="uname" class="form-control" [(ngModel)]="userName"/>
         </div>
         <div class="form-group">
             <label for="pword">Password</label>
-            <input type="password" name="pword" class="form-control"/>
+            <input type="password" name="pword" class="form-control" [(ngModel)]="password"/>
         </div>
-        <div class="btn-container">
-            <button class="btn btn-dark">Login</button>
+        <div class="btn-container" fxLayout="row" fxLayoutAlign="start">
+            <button class="btn btn-dark" (click)="logIn()" fxFlex="25">Login</button>
+            <div *ngIf="errMsg.length" class="errMessage" [ngClass]="{'errMessage-mobile':isMobile}" fxFlex="75">{{errMsg}}</div>
         </div>
     </div>
 </div>
